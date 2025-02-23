@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile.compose
     entrypoint: /compose-entrypoint.sh
     ports:
-      - '3000:3000'
+      - '3770:3000'
     depends_on:
       postgres:
         condition: service_healthy
@@ -20,8 +20,8 @@ services:
       - REDIS_HOST=redis
       - POSTGRES_HOST=postgres
       - POSTGRES_DATABASE=automatisch
-      - POSTGRES_USERNAME=automatisch_user
-      - POSTGRES_PASSWORD=automatisch_password
+      - POSTGRES_USERNAME=1082U387Qk
+      - POSTGRES_PASSWORD=1LTho4Z9DdX549eIZFapYJ0zL6VG5bV8
       - ENCRYPTION_KEY
       - WEBHOOK_SECRET_KEY
       - APP_SECRET_KEY
@@ -39,8 +39,8 @@ services:
       - REDIS_HOST=redis
       - POSTGRES_HOST=postgres
       - POSTGRES_DATABASE=automatisch
-      - POSTGRES_USERNAME=automatisch_user
-      - POSTGRES_PASSWORD=automatisch_password
+      - POSTGRES_USERNAME=1082U387Qk
+      - POSTGRES_PASSWORD=1LTho4Z9DdX549eIZFapYJ0zL6VG5bV8
       - ENCRYPTION_KEY
       - WEBHOOK_SECRET_KEY
       - APP_SECRET_KEY
@@ -51,8 +51,8 @@ services:
     image: 'postgres:14.5'
     environment:
       - POSTGRES_DB=automatisch
-      - POSTGRES_USER=automatisch_user
-      - POSTGRES_PASSWORD=automatisch_password
+      - POSTGRES_USER=1082U387Qk
+      - POSTGRES_PASSWORD=1LTho4Z9DdX549eIZFapYJ0zL6VG5bV8
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
